@@ -97,18 +97,29 @@ body {
 }
 
 input:not(:placeholder-shown):not(:focus):invalid {
+    /* width: 24px;
+    height: 24px; */
+    background-image: url("../img/icon-warning.svg");
+    background-repeat: no-repeat;
+    background-position: center right 20px;
     border-color: #FF7979;
     margin: 0;
 }
 
 .error_name {
+    width: 152px;
     display: none;
     color: #FF7979;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 16px;
+    text-align: right;
 }
 
 input:not(:placeholder-shown):not(:focus):invalid ~ .error_name {
     display: inline-block;
-    margin-left: 257px;
+    margin-left: 300px;
     margin-bottom: 19px;
     margin-top: 6px;
 }
