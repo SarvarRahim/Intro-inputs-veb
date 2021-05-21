@@ -11,7 +11,6 @@
 <body>
 
     <main class="site-main">
-
         <section class="hero__input">
 
             <div class="hero__grow container">
@@ -26,22 +25,26 @@
                         <form action="https://echo.htmlacademy.ru" method="POST">
                             <div class="input__group">
                             <label class="visually-hidden" for="name">Name</label>
-                            <input class="field" type="text" id="name" name="name" placeholder="Name" required>
+                            <input class="field" type="text" id="name" name="name" placeholder="Name" minlength="3" maxlength="50" required>
+                            <span class="error_name">First Name cannot be empty</span>
                         </div>
 
                         <div class="input__group">
                             <label class="visually-hidden" for="lname">Name</label>
-                            <input class="field" type="text" id="lname" name="lname" placeholder="Last Name" required>
+                            <input class="field" type="text" id="lname" name="lname" placeholder="Last Name" minlength="3" maxlength="50" required>
+                            <span class="error_name">Last Name cannot be empty</span>
                         </div>
 
                         <div class="input__group">
                             <label class="visually-hidden" for="email">Name</label>
-                            <input class="field" type="email" id="email" name="email" placeholder="Email Adress" required>
+                            <input class="field" type="email" id="email" name="email" placeholder="Email Adress" min="5" maxlength="20" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                            <span class="error_name">Looks like this is not an Email</span>
                         </div>
 
                         <div class="input__group">
                             <label class="visually-hidden" for="password">Name</label>
-                            <input class="field" type="password" id="password" name="password" placeholder="Password" required>
+                            <input class="field" type="password" id="password" name="password" placeholder="Password" minlength="8" maxlength="50" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+                            <span class="error_name">Password cannot be empty</span>
 
                             <button class="btn__sub" type="submit">CLAIM YOUR FREE TRIAL</button>
                             <p class="last__btn__text">By clicking the button, you are agreeing to our <b class="services">Terms and Services</b></p>

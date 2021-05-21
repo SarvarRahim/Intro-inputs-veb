@@ -96,6 +96,24 @@ body {
     margin-top: 121px;
 }
 
+input:not(:placeholder-shown):not(:focus):invalid {
+    border-color: #FF7979;
+    margin: 0;
+}
+
+.error_name {
+    display: none;
+    color: #FF7979;
+}
+
+input:not(:placeholder-shown):not(:focus):invalid ~ .error_name {
+    display: inline-block;
+    margin-left: 257px;
+    margin-bottom: 19px;
+    margin-top: 6px;
+}
+
+
 .card__input {
     width: 540px;
     background-color: #FFFFFF;
@@ -107,6 +125,7 @@ body {
 
 .field {
     width: 460px;
+    margin: 0;
     padding: 15px;
     margin-bottom: 20px;
     background: #FFFFFF;
@@ -142,6 +161,7 @@ body {
     background: #38CC8B;
     box-shadow: inset 0px -4px 0px rgba(0, 0, 0, 0.0908818);
     border-radius: 5px;
+    margin-top: 19px;
 }
 
 .btn__sub:focus {
@@ -168,3 +188,8 @@ body {
 .services {
     color: #FF7979;
 }
+
+input:valid {
+    border-color: #38CC8B;
+}
+
